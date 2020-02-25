@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="395.0" prefWidth="890.0" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="View_Controller.MainScreen">
+   <children>
+      <Label fx:id="labelMainScreen" layoutX="283.0" layoutY="27.0" text="Inventory Management System">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="partsTable" layoutX="25.0" layoutY="122.0" prefHeight="175.0" prefWidth="400.0">
+         <columns>
+            <TableColumn fx:id="partIDCol" prefWidth="100.0" text="Part ID" />
+            <TableColumn fx:id="partNameCol" prefWidth="100.0" text="Part Name" />
+            <TableColumn fx:id="partStockCol" prefWidth="100.0" text="Inventory Level" />
+            <TableColumn fx:id="partPriceCol" prefWidth="100.0" text="Price/Cost" />
+         </columns>
+      </TableView>
+      <TableView fx:id="prodTable" layoutX="465.0" layoutY="122.0" prefHeight="175.0" prefWidth="400.0">
+         <columns>
+            <TableColumn fx:id="prodIDCol" prefWidth="100.0" text="Product ID" />
+            <TableColumn fx:id="prodNameCol" prefWidth="100.0" text="Product Name" />
+            <TableColumn fx:id="prodStockCol" prefWidth="100.0" text="Inventory Level" />
+            <TableColumn fx:id="prodPriceCol" prefWidth="100.0" text="Price/Cost" />
+         </columns>
+      </TableView>
+      <Label fx:id="partsLabel" layoutX="25.0" layoutY="85.0" text="Parts">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="partSearchField" layoutX="156.0" layoutY="87.0" />
+      <Label fx:id="productsLabel" layoutX="465.0" layoutY="87.0" text="Products">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prodSearchField" layoutX="595.0" layoutY="89.0" />
+      <Button fx:id="partSearchBTN" layoutX="313.0" layoutY="87.0" mnemonicParsing="false" onAction="#onActionPartSearch" text="Search" />
+      <Button fx:id="prodSearchBTN" layoutX="752.0" layoutY="89.0" mnemonicParsing="false" onAction="#onActionProdSearch" text="Search" />
+      <Button fx:id="addPartBTN" layoutX="109.0" layoutY="305.0" mnemonicParsing="false" onAction="#onActionAddPart" prefHeight="25.0" prefWidth="72.0" text="Add" />
+      <Button fx:id="modifyPartBTN" layoutX="191.0" layoutY="305.0" mnemonicParsing="false" onAction="#onActionModifyPart" prefHeight="25.0" prefWidth="72.0" text="Modify" />
+      <Button fx:id="delPartBTN" layoutX="273.0" layoutY="305.0" mnemonicParsing="false" onAction="#onActionDelPart" prefHeight="25.0" prefWidth="72.0" text="Delete" />
+      <Button fx:id="addProdBTN" layoutX="547.0" layoutY="305.0" mnemonicParsing="false" onAction="#onActionAddProd" prefHeight="25.0" prefWidth="72.0" text="Add" />
+      <Button fx:id="modifyProdBTN" layoutX="629.0" layoutY="305.0" mnemonicParsing="false" onAction="#onActionModifyProd" prefHeight="25.0" prefWidth="72.0" text="Modify" />
+      <Button fx:id="delProdBTN" layoutX="711.0" layoutY="305.0" mnemonicParsing="false" onAction="#onActionDelProduct" prefHeight="25.0" prefWidth="72.0" text="Delete" />
+      <Button fx:id="exitBTN" layoutX="793.0" layoutY="350.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="25.0" prefWidth="72.0" text="Exit" />
+      <Button fx:id="partClearBTN" layoutX="373.0" layoutY="87.0" mnemonicParsing="false" onAction="#onActionPartReset" prefHeight="25.0" prefWidth="52.0" text="Reset" />
+      <Button fx:id="prodClearBTN" layoutX="813.0" layoutY="89.0" mnemonicParsing="false" onAction="#onActionProdReset" prefHeight="25.0" prefWidth="52.0" text="Reset" />
+   </children>
+</AnchorPane>
